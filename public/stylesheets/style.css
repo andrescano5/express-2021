@@ -12,6 +12,9 @@ a {
   color: #00B7FF;
 }
 
+img{
+  width: 100%;
+}
 .nav {
  display: flex;
  list-style: none;
@@ -32,4 +35,39 @@ a {
 }
 .nav-item_link:hover{
   background-color: aquamarine;
+}
+
+/* listado de libros */
+.lista{
+  max-width: 1200px;
+  margin: 40px auto;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.lista-item{
+  background-color: #717374;
+  border-radius:20px 0 20px 0;
+  height: 100%;
+  padding: auto;
+}
+.lista-item_link{
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+  padding: auto;
+}
+.lista-item_link:hover{
+  color:darkblue;
+}
+.lista-item_img{
+  height: 70%;
+  border-radius: 20px 0 0 0;
+}
+.lista-item_img:hover{
+  border: blue;
 }

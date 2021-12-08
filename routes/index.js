@@ -22,8 +22,9 @@ router.get('/contacto',(req, res) => {
 //localhost:3000/libros
 router.get('/libros', async (req, res) =>{
   //Llamar a la función getBooks
-    const books = await api.getBooks();
-    res.send(books);
+    const  books = await api.getBooks();
+  //Devolver el JSON con los libros recibidos
+    res.render('pages/libros',{ books});
 });
 
 //localhost:3000/libro/5
