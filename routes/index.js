@@ -28,9 +28,10 @@ router.get('/libros', async (req, res) =>{
 
 //localhost:3000/libro/5
 router.get('/libro/:id', async (req, res) => {
-  //console.log('la ruta trajo ' req.params.id); con el ':id' en '/libro/id' y el 'req.params.id' en api.getBookById(req.params.id)hacemos que al llamar la url especifica llame los datos requeridos automaticamente
+  //console.log('' req.params.id); con el ':id' en '/libro/id' y el 'req.params.id' en api.getBookById(req.params.id)hacemos que al llamar la url especifica llame los datos requeridos automaticamente
   const book = await api.getBookById(req.params.id);
-  res.send(book);
+
+  res.render('pages/libro', {book});
 });
 
 
